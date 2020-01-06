@@ -1,28 +1,23 @@
 <template>
   <div class="tab-bar-box">
     <mt-tabbar class="mint-tabbar is-fixed">
-      <router-link to="/personal/index">
-        <mt-tab-item id="tab1">
-          <img slot="icon" src="@/assets/icons/icon.png" />
-          tab1
-        </mt-tab-item>
-      </router-link>
       <router-link to="/orderCar/index">
-        <mt-tab-item id="tab2">
+        <mt-tab-item id="orderCar">
           <img slot="icon" src="@/assets/icons/icon.png" />
-          tab2
+          orderCar
         </mt-tab-item>
       </router-link>
-      <router-link to="/foo1">
-        <mt-tab-item id="tab3">
+      <router-link to="/user-list/index">
+        <mt-tab-item id="user-list">
           <img slot="icon" src="@/assets/icons/icon.png" />
-          tab3
+          user-list
         </mt-tab-item>
       </router-link>
-      <router-link to="/bar2">
-        <mt-tab-item id="tab4">
+
+      <router-link to="/personal/index">
+        <mt-tab-item id="personal">
           <img slot="icon" src="@/assets/icons/icon.png" />
-          tab4
+          personal
         </mt-tab-item>
       </router-link>
     </mt-tabbar>
@@ -63,7 +58,7 @@ export default {
   background-repeat: no-repeat;
   background-position: top left;
   position: relative;
-  background-color: #fafafa;
+  background-color: #e7d4d4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,15 +69,15 @@ export default {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
-.mint-tabbar > .mint-tab-item {
-  width: 20vw;
+.mint-tabbar .mint-tab-item {
+  width: 30vw;
   overflow: hidden;
   img {
-    // width: 80px;
-    height: 80px;
+    height: 4vh;
   }
 }
 .mint-tabbar > .mint-tab-item.is-selected {

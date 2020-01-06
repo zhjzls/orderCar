@@ -1,13 +1,13 @@
 <template>
   <div class="tab-bar-box">
     <mt-tabbar class="mint-tabbar is-fixed">
-      <router-link to="/foo">
+      <router-link to="/foo/index">
         <mt-tab-item id="tab1">
           <img slot="icon" src="@/assets/icons/icon.png" />
           tab1
         </mt-tab-item>
       </router-link>
-      <router-link to="/bar">
+      <router-link to="/bar/index">
         <mt-tab-item id="tab2">
           <img slot="icon" src="@/assets/icons/icon.png" />
           tab2

@@ -5,7 +5,7 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-import TabBar from '@/layout/TabBar/index'
+import TabBar from '@/views/tabBar/index'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -65,9 +65,24 @@ export const constantRoutes = [
     path: '/foo',
     name: 'personal',
     component: TabBar,
-    component: () => import('@/views/personal/index')
+    children: [{
+      path: 'index',
+      name: 'test',
+      component: () => import('@/views/personal/index'),
+      meta: {title: 'test', icon: 'dashboard'}
+    }]
   },
-
+  {
+    path: '/bar',
+    name: 'personal',
+    component: TabBar,
+    children: [{
+      path: 'index',
+      name: 'test',
+      component: () => import('@/views/order-car/index'),
+      meta: {title: 'test', icon: 'dashboard'}
+    }]
+  },
 
   {
     path: '/example',
@@ -134,9 +149,21 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/user-list',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Form',
+        component: () => import('@/views/user-list/index'),
+        meta: { title: 'Form', icon: 'form' }
+      }
+    ]
+  },
+  {
     path: '/orderCar',
     component: Layout,
-    
+
     children: [
       {
         path: 'index',
