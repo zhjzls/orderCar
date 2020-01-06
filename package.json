@@ -17,8 +17,12 @@
   "dependencies": {
     "axios": "0.18.1",
     "element-ui": "2.7.2",
+    "i": "^0.3.6",
     "js-cookie": "2.2.0",
+    "mint-ui": "^2.2.13",
+    "moment": "^2.24.0",
     "normalize.css": "7.0.0",
+    "npm": "^6.13.4",
     "nprogress": "0.2.0",
     "path-to-regexp": "2.4.0",
     "vue": "2.6.10",
